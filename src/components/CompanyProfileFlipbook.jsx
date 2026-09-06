@@ -34,14 +34,22 @@ const profilePages = [
   "SADAF_Page_15_Contact_Closing_FINAL_EXACT.png",
 ];
 
-const PDF_FILE = "/SADAF-Digital-Company-Profile.pdf";
-const TOTAL_PAGES = profilePages.length;
+const publicAsset = (path) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
 
-function pageUrl(index) {
-  return `/profile/${profilePages[index]}`;
-}
+const PDF_FILE = publicAsset("/SADAF-Digital-Company-Profile.pdf");
 
-function CompanyProfileFlipbook({ isOpen, onClose }) {
+function CompanyProfileFlipbook({ isOpen, onClose, pages }) {
+  const pagesToUse =
+    Array.isArray(pages) && pages.length > 0
+      ? pages
+      : profilePages.map((filename) => publicAsset(`/profile/${filename}`));
+
+  const TOTAL_PAGES = pagesToUse.length;
+
+  function pageUrl(index) {
+    return pagesToUse[index];
+  }
   const [currentPage, setCurrentPage] = useState(0);
   const [fullscreen, setFullscreen] = useState(false);
 
@@ -664,7 +672,7 @@ function CompanyProfileFlipbook({ isOpen, onClose }) {
                 currentPage + 1
               ).padStart(2, "0")}
             </strong>
-            <span> / 15</span>
+            <span> / {TOTAL_PAGES}</span>
           </div>
 
           <div className="sadaf-image-profile-progress">
