@@ -568,7 +568,7 @@ const galleryItems = [
     category: "FIELD SERVICE",
     title: "Professional Field Service",
     text: "Field-service activity in a residential and site-maintenance environment.",
-    image: "/gallery/gallery-field-service-01.jpg",
+    image: publicAsset("/Gallery/gallery-field-service-01.jpg"),
     verified: false,
   },
   {
@@ -576,7 +576,7 @@ const galleryItems = [
     category: "FIELD SERVICE",
     title: "Site Treatment Visit",
     text: "Technician performing a targeted service visit.",
-    image: "/gallery/gallery-field-service-02.jpg",
+    image: publicAsset("/Gallery/gallery-field-service-02.jpg"),
     verified: false,
   },
   {
@@ -584,7 +584,7 @@ const galleryItems = [
     category: "FIELD SERVICE",
     title: "On-Site Pest Service",
     text: "Technician carrying out field treatment in an outdoor environment.",
-    image: "/gallery/gallery-field-service-03.jpg",
+    image: publicAsset("/Gallery/gallery-field-service-03.jpg"),
     verified: false,
   },
   {
@@ -592,7 +592,7 @@ const galleryItems = [
     category: "PEST CONTROL",
     title: "Pest Control Service",
     text: "Targeted treatment activity inside a service environment.",
-    image: "/gallery/gallery-pest-control-01.jpg",
+    image: publicAsset("/Gallery/gallery-pest-control-01.jpg"),
     verified: false,
   },
   {
@@ -600,7 +600,7 @@ const galleryItems = [
     category: "PEST CONTROL",
     title: "Targeted Pest Treatment",
     text: "Professional technician carrying out focused pest-control work.",
-    image: "/gallery/gallery-pest-control-02.jpg",
+    image: publicAsset("/Gallery/gallery-pest-control-02.jpg"),
     verified: false,
   },
   {
@@ -608,7 +608,7 @@ const galleryItems = [
     category: "PEST CONTROL",
     title: "Warehouse Pest Management",
     text: "Pest-control activity in a storage and operational environment.",
-    image: "/gallery/gallery-pest-control-03.jpg",
+    image: publicAsset("/Gallery/gallery-pest-control-03.jpg"),
     verified: false,
   },
   {
@@ -616,7 +616,7 @@ const galleryItems = [
     category: "TERMITE",
     title: "Termite Inspection",
     text: "Focused inspection work around a vulnerable building area.",
-    image: "/gallery/gallery-termite-01.jpg",
+    image: publicAsset("/Gallery/gallery-termite-01.jpg"),
     verified: false,
   },
   {
@@ -624,7 +624,7 @@ const galleryItems = [
     category: "TERMITE",
     title: "Termite Treatment",
     text: "Targeted treatment activity around an existing structure.",
-    image: "/gallery/gallery-termite-02.jpg",
+    image: publicAsset("/Gallery/gallery-termite-02.jpg"),
     verified: false,
   },
   {
@@ -632,7 +632,7 @@ const galleryItems = [
     category: "TERMITE",
     title: "Structural Termite Service",
     text: "Professional termite service activity in a building access area.",
-    image: "/gallery/gallery-termite-03.jpg",
+    image: publicAsset("/Gallery/gallery-termite-03.jpg"),
     verified: false,
   },
   {
@@ -640,7 +640,7 @@ const galleryItems = [
     category: "DISINFECTION",
     title: "Disinfection Service",
     text: "Controlled disinfection activity in an occupied public environment.",
-    image: "/gallery/gallery-disinfection-01.jpg",
+    image: publicAsset("/Gallery/gallery-disinfection-01.jpg"),
     verified: false,
   },
   {
@@ -648,7 +648,7 @@ const galleryItems = [
     category: "DISINFECTION",
     title: "Professional Sanitization",
     text: "Disinfection service in a modern commercial interior.",
-    image: "/gallery/gallery-disinfection-02.jpg",
+    image: publicAsset("/Gallery/gallery-disinfection-02.jpg"),
     verified: false,
   },
   {
@@ -656,7 +656,7 @@ const galleryItems = [
     category: "DISINFECTION",
     title: "Facility Disinfection",
     text: "Professional treatment in a fitness and shared-use environment.",
-    image: "/gallery/gallery-disinfection-03.jpg",
+    image: publicAsset("/Gallery/gallery-disinfection-03.jpg"),
     verified: false,
   },
   {
@@ -664,7 +664,7 @@ const galleryItems = [
     category: "COMMERCIAL",
     title: "Commercial Site Service",
     text: "Pest-management activity in a high-traffic commercial environment.",
-    image: "/gallery/gallery-commercial-01.jpg",
+    image: publicAsset("/Gallery/gallery-commercial-01.jpg"),
     verified: false,
   },
   {
@@ -672,7 +672,7 @@ const galleryItems = [
     category: "COMMERCIAL",
     title: "Hospitality Service",
     text: "Professional pest-control activity in a hospitality environment.",
-    image: "/gallery/gallery-commercial-02.jpg",
+    image: publicAsset("/Gallery/gallery-commercial-02.jpg"),
     verified: false,
   },
   {
@@ -680,7 +680,7 @@ const galleryItems = [
     category: "COMMERCIAL",
     title: "Food-Service Environment",
     text: "Targeted service in a restaurant and food-service setting.",
-    image: "/gallery/gallery-commercial-03.jpg",
+    image: publicAsset("/Gallery/gallery-commercial-03.jpg"),
     verified: false,
   },
   {
@@ -688,7 +688,7 @@ const galleryItems = [
     category: "INDUSTRIAL",
     title: "Industrial Service",
     text: "Professional pest-management activity in an industrial facility.",
-    image: "/gallery/gallery-industrial-01.jpg",
+    image: publicAsset("/Gallery/gallery-industrial-01.jpg"),
     verified: false,
   },
   {
@@ -696,7 +696,7 @@ const galleryItems = [
     category: "INDUSTRIAL",
     title: "Industrial Treatment",
     text: "Technician working around industrial processing equipment.",
-    image: "/gallery/gallery-industrial-02.jpg",
+    image: publicAsset("/Gallery/gallery-industrial-02.jpg"),
     verified: false,
   },
   {
@@ -704,7 +704,7 @@ const galleryItems = [
     category: "INDUSTRIAL",
     title: "Warehouse Protection",
     text: "Pest-management service in a large storage environment.",
-    image: "/gallery/gallery-industrial-03.jpg",
+    image: publicAsset("/Gallery/gallery-industrial-03.jpg"),
     verified: false,
   },
 ];
@@ -2117,7 +2117,7 @@ function App() {
         </div>
       </footer>
 
-      {profileOpen && <CompanyProfileFlipbook isOpen={profileOpen} onClose={() => setProfileOpen(false)} />}
+      {profileOpen && <CompanyProfileFlipbook pages={profilePages} isOpen={profileOpen} onClose={() => setProfileOpen(false)} />}
     </div>
   );
 }
