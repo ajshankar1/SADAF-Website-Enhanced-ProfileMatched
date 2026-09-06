@@ -5,7 +5,8 @@ import brandHeader from "./assets/sadaf-brand-header.png";
 import technicianHero from "./assets/sadaf-technician-hero.jpg";
 import CompanyProfileFlipbook from "./components/CompanyProfileFlipbook.jsx";
 
-const publicAsset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+const ASSET_VERSION = "2026-09-06-01";
+const publicAsset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}?v=${ASSET_VERSION}`;
 
 const profilePages = [
   publicAsset("/profile/SADAF_Page_01_Cover_A4_Final_v2.png"),
