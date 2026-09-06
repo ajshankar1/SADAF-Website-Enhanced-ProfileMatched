@@ -5,9 +5,11 @@ import brandHeader from "./assets/sadaf-brand-header.png";
 import technicianHero from "./assets/sadaf-technician-hero.jpg";
 import CompanyProfileFlipbook from "./components/CompanyProfileFlipbook.jsx";
 
+const publicAsset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
+
 const profilePages = Array.from(
   { length: 15 },
-  (_, index) => `/profile/page-${String(index + 1).padStart(2, "0")}.jpg`
+  (_, index) => publicAsset(`/profile/page-${String(index + 1).padStart(2, "0")}.jpg`)
 );
 
 
@@ -553,7 +555,7 @@ const galleryItems = [
     category: "FIELD SERVICE",
     title: "Professional Field Service",
     text: "Field-service activity in a residential and site-maintenance environment.",
-    image: "/Gallery/gallery-field-service-01.jpg",
+    image: "/gallery/gallery-field-service-01.jpg",
     verified: false,
   },
   {
@@ -561,7 +563,7 @@ const galleryItems = [
     category: "FIELD SERVICE",
     title: "Site Treatment Visit",
     text: "Technician performing a targeted service visit.",
-    image: "/Gallery/gallery-field-service-02.jpg",
+    image: "/gallery/gallery-field-service-02.jpg",
     verified: false,
   },
   {
@@ -569,7 +571,7 @@ const galleryItems = [
     category: "FIELD SERVICE",
     title: "On-Site Pest Service",
     text: "Technician carrying out field treatment in an outdoor environment.",
-    image: "/Gallery/gallery-field-service-03.jpg",
+    image: "/gallery/gallery-field-service-03.jpg",
     verified: false,
   },
   {
@@ -577,7 +579,7 @@ const galleryItems = [
     category: "PEST CONTROL",
     title: "Pest Control Service",
     text: "Targeted treatment activity inside a service environment.",
-    image: "/Gallery/gallery-pest-control-01.jpg",
+    image: "/gallery/gallery-pest-control-01.jpg",
     verified: false,
   },
   {
@@ -585,7 +587,7 @@ const galleryItems = [
     category: "PEST CONTROL",
     title: "Targeted Pest Treatment",
     text: "Professional technician carrying out focused pest-control work.",
-    image: "/Gallery/gallery-pest-control-02.jpg",
+    image: "/gallery/gallery-pest-control-02.jpg",
     verified: false,
   },
   {
@@ -593,7 +595,7 @@ const galleryItems = [
     category: "PEST CONTROL",
     title: "Warehouse Pest Management",
     text: "Pest-control activity in a storage and operational environment.",
-    image: "/Gallery/gallery-pest-control-03.jpg",
+    image: "/gallery/gallery-pest-control-03.jpg",
     verified: false,
   },
   {
@@ -601,7 +603,7 @@ const galleryItems = [
     category: "TERMITE",
     title: "Termite Inspection",
     text: "Focused inspection work around a vulnerable building area.",
-    image: "/Gallery/gallery-termite-01.jpg",
+    image: "/gallery/gallery-termite-01.jpg",
     verified: false,
   },
   {
@@ -609,7 +611,7 @@ const galleryItems = [
     category: "TERMITE",
     title: "Termite Treatment",
     text: "Targeted treatment activity around an existing structure.",
-    image: "/Gallery/gallery-termite-02.jpg",
+    image: "/gallery/gallery-termite-02.jpg",
     verified: false,
   },
   {
@@ -617,7 +619,7 @@ const galleryItems = [
     category: "TERMITE",
     title: "Structural Termite Service",
     text: "Professional termite service activity in a building access area.",
-    image: "/Gallery/gallery-termite-03.jpg",
+    image: "/gallery/gallery-termite-03.jpg",
     verified: false,
   },
   {
@@ -625,7 +627,7 @@ const galleryItems = [
     category: "DISINFECTION",
     title: "Disinfection Service",
     text: "Controlled disinfection activity in an occupied public environment.",
-    image: "/Gallery/gallery-disinfection-01.jpg",
+    image: "/gallery/gallery-disinfection-01.jpg",
     verified: false,
   },
   {
@@ -633,7 +635,7 @@ const galleryItems = [
     category: "DISINFECTION",
     title: "Professional Sanitization",
     text: "Disinfection service in a modern commercial interior.",
-    image: "/Gallery/gallery-disinfection-02.jpg",
+    image: "/gallery/gallery-disinfection-02.jpg",
     verified: false,
   },
   {
@@ -641,7 +643,7 @@ const galleryItems = [
     category: "DISINFECTION",
     title: "Facility Disinfection",
     text: "Professional treatment in a fitness and shared-use environment.",
-    image: "/Gallery/gallery-disinfection-03.jpg",
+    image: "/gallery/gallery-disinfection-03.jpg",
     verified: false,
   },
   {
@@ -649,7 +651,7 @@ const galleryItems = [
     category: "COMMERCIAL",
     title: "Commercial Site Service",
     text: "Pest-management activity in a high-traffic commercial environment.",
-    image: "/Gallery/gallery-commercial-01.jpg",
+    image: "/gallery/gallery-commercial-01.jpg",
     verified: false,
   },
   {
@@ -657,7 +659,7 @@ const galleryItems = [
     category: "COMMERCIAL",
     title: "Hospitality Service",
     text: "Professional pest-control activity in a hospitality environment.",
-    image: "/Gallery/gallery-commercial-02.jpg",
+    image: "/gallery/gallery-commercial-02.jpg",
     verified: false,
   },
   {
@@ -665,7 +667,7 @@ const galleryItems = [
     category: "COMMERCIAL",
     title: "Food-Service Environment",
     text: "Targeted service in a restaurant and food-service setting.",
-    image: "/Gallery/gallery-commercial-03.jpg",
+    image: "/gallery/gallery-commercial-03.jpg",
     verified: false,
   },
   {
@@ -673,7 +675,7 @@ const galleryItems = [
     category: "INDUSTRIAL",
     title: "Industrial Service",
     text: "Professional pest-management activity in an industrial facility.",
-    image: "/Gallery/gallery-industrial-01.jpg",
+    image: "/gallery/gallery-industrial-01.jpg",
     verified: false,
   },
   {
@@ -681,7 +683,7 @@ const galleryItems = [
     category: "INDUSTRIAL",
     title: "Industrial Treatment",
     text: "Technician working around industrial processing equipment.",
-    image: "/Gallery/gallery-industrial-02.jpg",
+    image: "/gallery/gallery-industrial-02.jpg",
     verified: false,
   },
   {
@@ -689,7 +691,7 @@ const galleryItems = [
     category: "INDUSTRIAL",
     title: "Warehouse Protection",
     text: "Pest-management service in a large storage environment.",
-    image: "/Gallery/gallery-industrial-03.jpg",
+    image: "/gallery/gallery-industrial-03.jpg",
     verified: false,
   },
 ];
@@ -1328,7 +1330,7 @@ function App() {
                   }}>
                   <img
                     className="pest-selector-thumb"
-                    src={`/pests/pest-icon-${pest.id}.png`}
+                    src={publicAsset(`/pests/pest-icon-${pest.id}.png`)}
                     alt=""
                     aria-hidden="true"
                   />
@@ -1342,7 +1344,7 @@ function App() {
               <div className="pest-detail-intro rich-intro">
                 <img
                   className="pest-hero-image"
-                  src={`/pests/pest-icon-${selectedPestProfile.id}.png`}
+                  src={publicAsset(`/pests/pest-icon-${selectedPestProfile.id}.png`)}
                   alt={selectedPestProfile.name}
                 />
                 <span>{selectedPestProfile.category}</span>
@@ -1876,7 +1878,7 @@ function App() {
           </div>
           <div className="profile-promo-actions">
             <button className="primary" onClick={() => setProfileOpen(true)}>OPEN PROFILE <span>→</span></button>
-            <a className="outline" href="/SADAF-Digital-Company-Profile.pdf" download>DOWNLOAD PDF</a>
+            <a className="outline" href={publicAsset("/SADAF-Digital-Company-Profile.pdf")} download>DOWNLOAD PDF</a>
           </div>
         </section>
 
@@ -2090,7 +2092,7 @@ function App() {
             <p>Review the approved 15-page corporate presentation or download the A4 PDF for sharing.</p>
             <div className="footer-profile-actions">
               <button className="footer-profile-btn" onClick={() => setProfileOpen(true)}>OPEN PROFILE <span>→</span></button>
-              <a className="footer-profile-link" href="/SADAF-Digital-Company-Profile.pdf" download>DOWNLOAD PDF</a>
+              <a className="footer-profile-link" href={publicAsset("/SADAF-Digital-Company-Profile.pdf")} download>DOWNLOAD PDF</a>
             </div>
             <span className="footer-demo-note">CLIENT DEMO • DEMO DATA • NOT FOR PRODUCTION</span>
           </div>
