@@ -7,10 +7,23 @@ import CompanyProfileFlipbook from "./components/CompanyProfileFlipbook.jsx";
 
 const publicAsset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
 
-const profilePages = Array.from(
-  { length: 15 },
-  (_, index) => publicAsset(`/profile/page-${String(index + 1).padStart(2, "0")}.jpg`)
-);
+const profilePages = [
+  publicAsset("/profile/SADAF_Page_01_Cover_A4_Final_v2.png"),
+  publicAsset("/profile/SADAF_Page_02_Company_Overview_A4.png"),
+  publicAsset("/profile/SADAF_Page_03_Vision_Mission_Values_A4_FINAL.png"),
+  publicAsset("/profile/SADAF_Page_04_Our_Expertise_A4_FINAL.png"),
+  publicAsset("/profile/SADAF_Page_05_Our_Services_EXACT_APPROVED_ARTWORK.png"),
+  publicAsset("/profile/SADAF_Page_06_Industries_We_Serve_A4_FINAL_EXACT.png"),
+  publicAsset("/profile/SADAF_Page_07_Treatment_Service_Methodology_A4_FINAL_EXACT.png"),
+  publicAsset("/profile/SADAF_Page_08_Quality_Safety_Service_Assurance_A4_FINAL_EXACT.png"),
+  publicAsset("/profile/SADAF_Page_09_Certifications_Credentials_FINAL.png"),
+  publicAsset("/profile/SADAF_Page_10_Projects_Case_Studies_FINAL_EXACT.png"),
+  publicAsset("/profile/SADAF_Page_11_Clients_Industries_Social_Proof_FINAL_EXACT.png"),
+  publicAsset("/profile/SADAF_Page_12_Client_Testimonials_FINAL_EXACT.png"),
+  publicAsset("/profile/SADAF_Page_13_Why_Sadaf_FINAL_EXACT.png"),
+  publicAsset("/profile/SADAF_Page_14_Digital_Service_Management_FINAL_EXACT.png"),
+  publicAsset("/profile/SADAF_Page_15_Contact_Closing_FINAL_EXACT.png"),
+];
 
 
 const servicePrograms = [
